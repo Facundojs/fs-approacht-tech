@@ -13,8 +13,8 @@ app.post("/login", (req, res) => {
 
   const user = db.users.find(user => user.username === username && user.password === password)
 
-  if (user) return res.send(user)
-  else return res.send(null)
+  if (user) return res.status(200).send(user)
+  else return res.status(404).send(null)
 });
 
 app.get("/posts", (_, res) => res.send("posts"));
