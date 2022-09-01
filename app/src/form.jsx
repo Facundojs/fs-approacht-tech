@@ -3,8 +3,8 @@ import { useState } from "react"
 const Form = ({ onSubmit }) => {
 
   const [form, setForm] = useState({
-    username: "",
-    password: "",
+    "username": "facundo",
+    "password": "1234"
   })
 
   const Submit = (e) => {
