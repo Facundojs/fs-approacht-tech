@@ -11,12 +11,7 @@ app.use(bodyParser.json())
 app.post("/signup", (_, res) => res.send("signup"));
 
 app.post("/login", (req, res) => {
-  const { username, password } = req.body;
-
-  const user = db.users.find(user => user.username === username && user.password === password)
-
-  if (user) return res.json({ user })
-  else return res.json({ user: null})
+  return res.send("login")
 });
 
 app.get("/posts", (_, res) => res.send("posts"));
